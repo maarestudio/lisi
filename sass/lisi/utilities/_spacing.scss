@@ -1,0 +1,74 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $lengths in $spacers {
+        $length-x: map-get($lengths, x);
+        $length-y: map-get($lengths, y);
+
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length-y $length-x !important;
+        }
+
+        .#{$abbrev}t#{$infix}-#{$size} {
+          #{$prop}-top: $length-y !important;
+        }
+
+        .#{$abbrev}r#{$infix}-#{$size} {
+          #{$prop}-right: $length-x !important;
+        }
+
+        .#{$abbrev}b#{$infix}-#{$size} {
+          #{$prop}-bottom: $length-y !important;
+        }
+
+        .#{$abbrev}l#{$infix}-#{$size} {
+          #{$prop}-left: $length-x !important;
+        }
+
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length-x !important;
+          #{$prop}-right: $length-x !important;
+        }
+
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length-y !important;
+          #{$prop}-bottom: $length-y !important;
+        }
+
+        // Some special margin & paddin utils.
+
+        .#{$abbrev}#{$infix}-auto {
+          #{$prop}: auto !important;
+        }
+
+        .#{$abbrev}t#{$infix}-auto {
+          #{$prop}-top: auto !important;
+        }
+
+        .#{$abbrev}r#{$infix}-auto {
+          #{$prop}-right: auto !important;
+        }
+
+        .#{$abbrev}b#{$infix}-auto {
+          #{$prop}-bottom: auto !important;
+        }
+
+        .#{$abbrev}l#{$infix}-auto {
+          #{$prop}-left: auto !important;
+        }
+
+        .#{$abbrev}x#{$infix}-auto {
+          #{$prop}-left: auto !important;
+          #{$prop}-right: auto !important;
+        }
+
+        .#{$abbrev}y#{$infix}-auto {
+          #{$prop}-top: auto !important;
+          #{$prop}-bottom: auto !important;
+        }
+      }
+    }
+  }
+}

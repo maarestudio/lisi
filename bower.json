@@ -1,0 +1,35 @@
+{
+  "name": "lisi-css",
+  "version": "0.1.2",
+  "homepage": "https://github.com/maarestudio/lisi",
+  "description": ".Lisi is a clean starting point CSS framework to build websites without annoying styles.",
+  "main": "sass/lisi.scss",
+  "style": "lisi/dist/lisi.min.css",
+  "author": "Domingo Santana <hello@domingosantana.com> (http://domingosantana.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maarestudio/lisi.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "grid",
+    "responsive",
+    "framework",
+    "flexbox",
+    "columns",
+    "fluid",
+    "lisi"
+  ],
+  "bugs": {
+    "url": "https://github.com/maarestudio/lisi/issues"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "code_of_conduct.md",
+    "contributing.md"
+  ]
+}

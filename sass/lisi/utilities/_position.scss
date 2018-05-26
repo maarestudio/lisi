@@ -1,0 +1,35 @@
+// Position.
+
+$positions: static, relative, absolute, fixed, sticky;
+
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position !important;
+  }
+}
+
+// Fixed.
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+// Sticky.
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+}

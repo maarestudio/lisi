@@ -1,0 +1,29 @@
+@at-root {
+  @-ms-viewport { width: device-width; }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+img,
+audio {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}

@@ -1,0 +1,79 @@
+// Responsive alignment.
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left {
+      text-align: left !important;
+    }
+
+    .text#{$infix}-right {
+      text-align: right !important;
+    }
+
+    .text#{$infix}-center {
+      text-align: center !important;
+    }
+
+    .text#{$infix}-justify {
+      text-align: justify !important;
+    }
+
+    .text#{$infix}-nowrap {
+      white-space: nowrap !important;
+    }
+
+    .text#{$infix}-truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+// Transformation.
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+// Weight and italics.
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+// Text color.
+
+@each $name, $value in $colors {
+  .text-#{$name} {
+    color: $value !important;
+  }
+}
+
+// Misc.
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}

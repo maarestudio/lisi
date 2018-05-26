@@ -1,0 +1,52 @@
+{
+  "name": "lisi-css",
+  "version": "0.1.2",
+  "homepage": "https://github.com/maarestudio/lisi",
+  "description": ".Lisi is a clean starting point CSS framework to build websites without annoying styles.",
+  "main": "sass/lisi.scss",
+  "style": "lisi/dist/lisi.min.css",
+  "author": "Domingo Santana <hello@domingosantana.com> (http://domingosantana.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maarestudio/lisi.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "grid",
+    "responsive",
+    "framework",
+    "flexbox",
+    "columns",
+    "fluid",
+    "lisi"
+  ],
+  "bugs": {
+    "url": "https://github.com/maarestudio/lisi/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "clean-css-cli": "^4.1.11",
+    "node-sass": "^4.9.0",
+    "postcss-cli": "^5.0.0",
+    "rimraf": "^2.6.2",
+    "sass-lint": "^1.12.1"
+  },
+  "scripts": {
+    "start": "npm run build-sass -- --watch",
+    "build": "npm run build-clean && npm run test && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-clean": "rimraf css",
+    "test": "sass-lint 'sass/**/*.scss' -v -q",
+    "build-sass": "node-sass --output-style expanded --source-map true sass/lisi.scss dist/lisi.css",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output dist/lisi.css dist/lisi.css",
+    "build-cleancss": "cleancss -o dist/lisi.min.css dist/lisi.css"
+  },
+  "files": [
+    "css",
+    "sass",
+    "license.md",
+    "readme.md"
+  ]
+}

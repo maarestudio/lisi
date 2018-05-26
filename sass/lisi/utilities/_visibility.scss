@@ -1,0 +1,16 @@
+.invisible {
+  @include invisible();
+}
+
+@each $bp in map-keys($grid-breakpoints) {
+  .hidden-#{$bp}-up {
+    @include breakpoint-up($bp) {
+      display: none !important;
+    }
+  }
+  .hidden-#{$bp}-down {
+    @include breakpoint-down($bp) {
+      display: none !important;
+    }
+  }
+}
