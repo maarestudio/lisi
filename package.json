@@ -1,6 +1,6 @@
 {
   "name": "lisi-css",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/maarestudio/lisi",
   "description": ".Lisi is a clean starting point CSS framework to build websites without annoying styles.",
   "main": "sass/lisi.scss",
@@ -44,7 +44,7 @@
     "build-cleancss": "cleancss -o dist/lisi.min.css dist/lisi.css"
   },
   "files": [
-    "css",
+    "dist",
     "sass",
     "license.md",
     "readme.md"
