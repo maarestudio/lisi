@@ -1,6 +1,8 @@
+<div>
 <a href="https://lisi.es">
 <img src="https://i.imgur.com/dsaOh1x.png" alt=".Lisi CSS Framework" width=337 height=35>
 </a>
+</div>
 
 <br>
 
@@ -59,7 +61,7 @@ The main `css` files is located in the `dist/` folder. Include it on every `HTML
 Or you can use the hosted version on [jsDelivr](https://www.jsdelivr.com):
 
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lisi-css/dist/lisi.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lisi-css@0.2.2/dist/lisi.min.css">
 ```
 
 Guides and reference are published in [https://lisi.es/documentation](https://lisi.es/documentation) (Coming soon). Take a look and start creating your web page!
